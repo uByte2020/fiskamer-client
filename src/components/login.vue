@@ -1,21 +1,24 @@
 <template>
     <div id="ConteudoPrincipal" :style="{backgroundImage:'url('+backgroundimg+')'}">
-        <div id="ConteudoSecundario">
+        <div id="login">
+            <b-container>
+                <b-row class="justify-content-md-center">
+                    <b-col cols="12" md="12">
+                        <div>
+                            <b-img id="img" :src="require('../assets/imgs/logo2 copy.png')"  fluid  alt = "Responsive image" > </b-img > 
+                        </div>
+                    </b-col>
 
-            <div :class="{'cadastro':!fornecedor,'Fornecedor':fornecedor}">
-                <b-container>
-                    <b-row class="justify-content-md-center">
-                        <b-col cols="12" md="12">
-                            <div>
-                                <b-img :src="require('../assets/imgs/logo2 copy.png')"  fluid  alt = "Responsive image" > </b-img > 
-                            </div>
-                        </b-col>
+                    <b-col cols="12" md="12">
+                        <p>Não possui uma conta? <router-link to="/cadastrar">Criar conta</router-link></p>
+                    </b-col>
 
+                    <form v-on:submit="Validacao">
                         <b-col cols="12" md="12">
                             <div  class="campoTexto" >
-                                <b-icon class="icones" icon="envelope"></b-icon>
+                                <b-icon class="icones" icon="envelope-fill"></b-icon>
                             <input v-model="email" class="texto"
-                                type="email" placeholder="Digite o Email" size="md" required/>
+                                type="email" placeholder="Email" size="md" required/>
                             </div>
                         </b-col>
                         
@@ -23,24 +26,23 @@
                                 <div class="campoTexto">
                                     <b-icon class="icones" icon="lock-fill"></b-icon>
                                     <input v-model="senha" type="password" class="texto"
-                                    placeholder="Digite o senha" size="md" required/>
+                                    placeholder="Senha" size="md" required/>
                                 </div>
                             </b-col>
 
                         <b-col cols="12" md="auto">
-                            <p><b-form-checkbox v-model="aceitar"> Aceitar os termos de uso de privacidade</b-form-checkbox></p>
+                            <p><b-form-checkbox :state="checkbox" v-model="concordo"> Aceitar os termos de uso de privacidade</b-form-checkbox></p>
                         </b-col>
 
                         <b-col cols="12" md="12">
                             <b-button type="submit" pill block size="md" class="mb-3 btn"
-                            @click="Validacao">
-                                <b-icon icon="file-person" aria-hidden="true"></b-icon>
-                                Entrar
+                            @click="Validacao()">
+                                Login
                             </b-button>
                         </b-col>
-                    </b-row>
-                </b-container>
-            </div>
+                    </form>
+                </b-row>
+            </b-container>
         </div>
     </div>
 </template>
@@ -49,15 +51,17 @@
 export default {
     data(){
         return{
-            email:null,
-            senha:null,
-            aceitar:null,
+            email:"",
+            senha:"",
+            concordo:false,
             backgroundimg: require('@/assets/imgs/wedding-room.jpg'),   
-            senhaIncorreta:false,
+            
         }
     },
     computed:{
-        
+        checkbox(){
+            return Boolean(this.concordo)
+        }
     },
     props:{
         add:Object,
@@ -65,9 +69,7 @@ export default {
     methods:{
         Validacao:function(){
             if(this.nome.length<4||this.senha.length<4){
-                alert("incorreto")
-            }else if( this.senha!=this.confirmSenha){
-                this.senhaIncorreta=true
+                alert("Preencha os dados corretamente")
             }else{
                 console.log('Dados enviados')
             }
@@ -83,13 +85,7 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
     }
-    #ConteudoSecundario{
-        position: relative;
-        top: 0;
-        color: #ffffff;
-        height: 100vh;
-    }
-    .cadastro{
+    #login{
         width: 390px;
         background: rgba(37, 35, 35, 0.8)!important;
         margin: auto;
@@ -111,19 +107,25 @@ export default {
     }
     
     .btn{
-        color: black;
+        color: rgb(255, 255, 255);
         border-radius: 10px;
         background-color:#cc990d;
     }
     .btn:hover{
-        color: rgb(8, 43, 141);
+        color: rgb(255, 255, 255);
         background-color:#744e07;
         border-radius: 10px;
     }
+    .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color:#744e07;}
     .icones{
-        color: #cc990d;
+        color: rgb(235, 191, 71);
         font-size: 25px;
         margin-right: 10px;
+    }
+    #img{
+        padding: 4%;
     }
     input{
         background: transparent;
@@ -131,9 +133,13 @@ export default {
         color: #f2f2f2;
         font-size: 18px;
         height: 30px;
-        line-height: 30px;
         outline: none !important;
         width: 85%;
-        border-bottom: 1px solid rgb(248, 246, 246); 
+        border-bottom: 1px solid rgb(248, 246, 246);
+    }
+    p{
+        margin-top:15px;
+        margin-left: 7px;
+        color:#ffffff;
     }
 </style>
