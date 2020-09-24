@@ -24,11 +24,15 @@
           <p class="da-carousel-caption-content">{{ item.content }}</p>
         </div>
       </b-carousel-slide>
+      <HomeSearch />
     </b-carousel>
   </div>
 </template>
 <script>
+import HomeSearch from './HomeSearch.vue'
 export default {
+  name: 'HomeCarrousel',
+  components: { HomeSearch },
   props: ['carouselProp'],
   data() {
     return {

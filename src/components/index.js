@@ -1,5 +1,6 @@
-import HelloWorld from '../components/HelloWorld.vue'
-import HomeCarrousel from '../components/home/HomeCarrousel.vue'
-import Header from '../components/Header.vue'
+import HelloWorld from './HelloWorld.vue'
+import HomeCarrousel from './home/HomeCarrousel.vue'
+import HomeSearch from './home/HomeSearch.vue'
+import Header from './Header.vue'
 
-export { HelloWorld, Header, HomeCarrousel }
+export { HelloWorld, Header, HomeCarrousel, HomeSearch }
