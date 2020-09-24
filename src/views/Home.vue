@@ -1,17 +1,19 @@
 <template>
   <div class="home">
-    <Header/>
+    <Header />
+    <HomeCarrousel />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import { Header } from '@/components'
+import { Header, HomeCarrousel } from '@/components'
 
 export default {
   name: 'Home',
   components: {
-    Header
-  }
+    Header,
+    HomeCarrousel,
+  },
 }
 </script>
