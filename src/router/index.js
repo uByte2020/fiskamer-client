@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/Cadastrar',
@@ -23,12 +23,13 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: About
-  }
+    component: About,
+  },
 ]
 
 const router = new VueRouter({
-  routes
+  mode: 'history',
+  routes,
 })
 
 export default router
