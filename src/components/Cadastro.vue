@@ -10,16 +10,16 @@
                     </b-col>
 
                     <b-col cols="12" md="12">
-                        <p class="texto">Já possui uma conta?<router-link to="/login">
+                        <p class="texto">Já possui uma conta?<router-link id="link" to="/login">
                         Entrar</router-link> </p>
                     </b-col>
                     
                     <b-col cols="12" md="12">
                         <div>
-                            <button type="button" class="mb-3 botao"
+                            <button type="button" class="mb-3 botao1"
                             @click="BotaoFornecedor">
                                 Fornecedor</button>
-
+                                
                             <button type="button" class="mb-3 botao"
                             @click="BotaoCliente">
                                 Cliente
@@ -142,9 +142,13 @@ export default {
         background-repeat: no-repeat;
         width: auto;
         min-width: 100vw;
+        position: absolute;
     }
     #img{
         padding: 4%;
+    }
+    #link{
+        color: #cfaf58;
     }
     p{
         margin-top:8px;
@@ -220,12 +224,21 @@ export default {
         color: rgb(255, 255, 255);
         background-color:#cc990d;
         border-color: none;
-        border:none;
+        border: none;
+        border-left: 1px solid black;
         font-size: 20px;
         width: 150px;
         text-align: center;
         }
-
+    .botao1{
+        color: rgb(255, 255, 255);
+        background-color:#cc990d;
+        border-color: none;
+        border: none;
+        font-size: 20px;
+        width: 150px;
+        text-align: center;
+        }
     .icones{
         color: #cfaf58;
         font-size: 25px;
