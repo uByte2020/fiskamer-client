@@ -63,6 +63,4 @@ export default {
 .home-search-form {
   justify-content: center;
 }
-.search-btn {
-}
 </style>
