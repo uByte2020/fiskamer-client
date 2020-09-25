@@ -1,5 +1,5 @@
 <template>
-  <div id="home-search" :style="'background-color: '+background">
+  <div id="home-search" :style="{ 'background-color': getBackgroundColor }">
     <div>
       <b-form inline class="home-search-form">
         <b-input
@@ -12,7 +12,9 @@
           class="mb-2 mr-sm-2 mb-sm-0"
           placeholder="Onde?"
         ></b-input>
-        <b-button class="search-btn" :style="'background-color: '+BtnColor"
+        <b-button
+          class="search-btn"
+          :style="{ 'background-color': getBtnColor }"
           ><b-icon icon="search" class="rounded"></b-icon
           >&nbsp;Procurar</b-button
         >
@@ -25,11 +27,18 @@
 export default {
   name: 'HomeSearch',
   props: {
-    msg: String,
-    background:String,
-    BtnColor:String,
+    backgroundColor: String,
+    btnColor: String,
   },
   mounted() {},
+  computed: {
+    getBackgroundColor() {
+      return this.backgroundColor || 'rgba(255, 205, 3, 0.8)'
+    },
+    getBtnColor() {
+      return this.btnColor || '#212529'
+    },
+  },
 }
 </script>
 
@@ -47,15 +56,11 @@ export default {
   border-radius: 15px;
   height: 100px;
   width: 65%;
-  background-color: rgba(37, 36, 33, 0.8);
 }
 #home-search > div {
   margin-top: 5%;
 }
 .home-search-form {
   justify-content: center;
-}
-.search-btn {
-  background-color: #212529;
 }
 </style>

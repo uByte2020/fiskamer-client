@@ -3,14 +3,14 @@
             <Header/>
         <div id="Conteudo" :style="{ backgroundImage: 'url(' + backgroundimg + ')' }">
                      
-                <b-img id="img"
-                    :src="require('../assets/imgs/logo2.png')"
-                    fluid
-                    alt="Responsive image"
-                    >
-                </b-img>
-            <HomeSearch background="rgba(37, 36, 33, 0.8);" 
-                BtnColor="rgba(255, 205, 3, 0.8);"/>
+            <b-img id="img"
+                :src="require('../assets/imgs/logo2.png')"
+                fluid
+                alt="Responsive image">
+            </b-img>
+
+            <HomeSearch backgroundColor="rgba(255, 205, 3, 0.8)" 
+                BtnColor="#212529"/>
         </div>
     </div>
 </template>
@@ -43,8 +43,8 @@ export default {
     }
     #img{
         padding: 10px;
-        width: 60%;
-        height: 60%;
+        width: 70%;
+        height: 65%;
         margin: 180px auto;
     }
 </style>
