@@ -1,5 +1,5 @@
 <template>
-  <div id="home-search" :style="'background-color: '+background">
+  <div id="home-search">
     <div>
       <b-form inline class="home-search-form">
         <b-input
@@ -12,7 +12,7 @@
           class="mb-2 mr-sm-2 mb-sm-0"
           placeholder="Onde?"
         ></b-input>
-        <b-button class="search-btn" :style="'background-color: '+BtnColor"
+        <b-button class="search-btn"
           ><b-icon icon="search" class="rounded"></b-icon
           >&nbsp;Procurar</b-button
         >
@@ -26,8 +26,6 @@ export default {
   name: 'HomeSearch',
   props: {
     msg: String,
-    background:String,
-    BtnColor:String,
   },
   mounted() {},
 }
@@ -47,7 +45,7 @@ export default {
   border-radius: 15px;
   height: 100px;
   width: 65%;
-  background-color: rgba(37, 36, 33, 0.8);
+  background-color: rgba(255, 205, 3, 0.8);
 }
 #home-search > div {
   margin-top: 5%;

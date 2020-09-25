@@ -132,7 +132,6 @@ export default {
   background: rgba(37, 35, 35, 0.8) !important;
   margin: 60px auto;
   padding: 15px;
-  border: 1px solid #050505;
   box-shadow: 1px 2px 7px rgb(32, 25, 25);
 }
 .texto {

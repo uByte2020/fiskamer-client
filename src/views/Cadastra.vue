@@ -165,9 +165,7 @@ export default {
       return Boolean(this.aceitar)
     },
   },
-  props: {
-    add: Object,
-  },
+  props: {},
   methods: {
     BotaoCliente: function () {
       return (this.fornecedor = false)
@@ -227,9 +225,8 @@ input {
 .cadastro {
   width: 390px;
   background: rgba(63, 59, 59, 0.8) !important;
-  margin: auto;
+  margin: 50px auto;
   padding: 10px;
-  border: 1px solid #050505;
   box-shadow: 1px 2px 7px rgb(32, 25, 25);
   height: 100%;
 }
