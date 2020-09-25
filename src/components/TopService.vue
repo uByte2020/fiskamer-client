@@ -14,6 +14,7 @@
             :style="{
               transform: 'translateX' + '(' + currentOffset + 'px' + ')',
             }"
+            @resize="updatePaginationFactor()"
           >
             <ServiceItem
               v-bind:key="i"
@@ -45,9 +46,6 @@ export default {
   },
   data() {
     return {
-      currentOffset: 0,
-      windowSize: 3,
-      paginationFactor: 220,
       items: [
         {
           name: 'Kin Khao',
@@ -113,6 +111,9 @@ export default {
           moeda: 'AKZ cream',
         },
       ],
+      currentOffset: 0,
+      windowSize: 3,
+      paginationFactor: 268.66,
     }
   },
   computed: {
@@ -123,7 +124,7 @@ export default {
       )
     },
     atHeadOfList() {
-      return this.currentOffset === 0
+      return this.currentOffset >= 0
     },
   },
   methods: {
@@ -135,6 +136,15 @@ export default {
         this.currentOffset += this.paginationFactor
       }
     },
+    updatePaginationFactor() {
+      console.log('Changed')
+    },
+  },
+  mounted() {
+    const firstCardItem = document.getElementsByClassName(
+      'card-carousel--overflow-container'
+    )[0].offsetWidth
+    this.paginationFactor = firstCardItem / 3
   },
 }
 </script>
@@ -146,6 +156,11 @@ body {
   color: #2c3e50;
   font-family: 'Source Sans Pro', sans-serif;
 }
+#v-carousel h3 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 .card-carousel-wrapper {
   display: flex;
   align-items: center;
@@ -156,8 +171,8 @@ body {
 .card-carousel {
   display: flex;
   justify-content: center;
-  width: 640px;
-  /* width: 80%; */
+  /* width: 640px; */
+  width: 80%;
 }
 .card-carousel--overflow-container {
   overflow: hidden;
@@ -169,8 +184,9 @@ body {
   height: 15px;
   padding: 10px;
   box-sizing: border-box;
-  border-top: 2px solid #42b883;
-  border-right: 2px solid #42b883;
+  border-top: 2px solid #ffcd03;
+  border-right: 2px solid #ffcd03;
+  font-weight: 700;
   cursor: pointer;
   margin: 0 20px;
   transition: transform 150ms linear;

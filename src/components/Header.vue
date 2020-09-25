@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar id="home-nav" toggleable="lg" type="dark">
-      <b-navbar-brand id="navbar-brand" href="#">
+      <b-navbar-brand id="navbar-brand" href="#" class="ml-4">
         <img
           class="fiskamer-logo"
           src="@/assets/imgs/logo2.png"

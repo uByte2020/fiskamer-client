@@ -39,7 +39,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .card-carousel--card {
-  margin: 0 10px;
+  margin: 0 1%;
   cursor: pointer;
   box-shadow: 0 4px 15px 0 rgba(40, 44, 53, 0.06),
     0 2px 2px 0 rgba(40, 44, 53, 0.08);
@@ -47,6 +47,8 @@ export default {
   border-radius: 4px;
   z-index: 3;
   margin-bottom: 2px;
+  flex-grow: 1;
+  min-width: 32%;
 }
 .card-carousel--card:first-child {
   margin-left: 0;
@@ -60,6 +62,9 @@ export default {
   border-top-right-radius: 4px;
   transition: opacity 150ms linear;
   user-select: none;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 .card-carousel--card img:hover {
   opacity: 0.5;
@@ -145,7 +150,7 @@ export default {
 }
 
 .card-carousel--card--footer .card-carousel--description {
-  height: 100px;
+  height: 99px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -154,5 +159,47 @@ export default {
   font-size: 0.8rem;
   text-align: justify;
   height: 100%;
+}
+
+@media (min-width: 1281px) {
+  .card-carousel--card {
+    min-width: 32%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .card-carousel--card {
+    min-width: 32%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-carousel--card {
+    min-width: 32%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .card-carousel--card {
+    min-width: 32%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .card-carousel--card {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .card-carousel--card {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-carousel--card {
+    min-width: 100%;
+  }
 }
 </style>
