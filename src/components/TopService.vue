@@ -1,6 +1,6 @@
 <template>
-  <div id="v-carousel" class="pt-5">
-    <h3>Serviços em Destaques</h3>
+  <div id="v-carousel" class="mt-5">
+    <h3>Fornecedores em Destaques</h3>
     <div class="card-carousel-wrapper">
       <div
         class="card-carousel--nav__left"

@@ -64,6 +64,14 @@ export default {
   justify-content: center;
 }
 
+#inline-form-input-what:focus,
+#inline-form-input-where:focus {
+  border-color: rgba(255, 205, 3, 0.8);
+  box-shadow: 0 1px 1px rgba(255, 205, 3, 0.8) inset,
+    0 0 8px rgba(255, 205, 3, 0.8);
+  outline: 0 none;
+}
+
 @media (max-width: 767px) {
   #home-search > div {
     margin-top: 1% !important;
