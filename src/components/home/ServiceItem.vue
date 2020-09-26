@@ -49,6 +49,7 @@ export default {
   margin-bottom: 2px;
   flex-grow: 1;
   min-width: 32%;
+  padding-bottom: 15px;
 }
 .card-carousel--card:first-child {
   margin-left: 0;

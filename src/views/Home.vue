@@ -3,12 +3,13 @@
     <Header />
     <HomeCarrousel />
     <TopService />
+    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import { Header, HomeCarrousel, TopService } from '@/components'
+import { Header, HomeCarrousel, TopService, Footer } from '@/components'
 
 export default {
   name: 'Home',
@@ -16,6 +17,7 @@ export default {
     Header,
     HomeCarrousel,
     TopService,
+    Footer,
   },
 }
 </script>
