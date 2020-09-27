@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import ServiceItem from './home/ServiceItem.vue'
+import ServiceItem from './ServiceItem.vue'
 
 export default {
   name: 'TopService',
