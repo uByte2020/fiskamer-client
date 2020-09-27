@@ -19,12 +19,12 @@
         class="da-carousel-slide"
         :img-src="item.image"
       >
-        <div class="da-carousel-caption">
+        <div v-show="hasCaption" class="da-carousel-caption">
           <h1 class="da-carousel-caption-header">{{ item.title }}</h1>
           <p class="da-carousel-caption-content">{{ item.content }}</p>
         </div>
       </b-carousel-slide>
-      <HomeSearch class="da-home-search" />
+      <HomeSearch v-show="hasHomeSearch" class="da-home-search" />
     </b-carousel>
   </div>
 </template>
@@ -33,7 +33,11 @@ import HomeSearch from './HomeSearch.vue'
 export default {
   name: 'HomeCarrousel',
   components: { HomeSearch },
-  props: ['carouselProp'],
+  props: {
+    carouselProp: Array,
+    hasCaption: { type: Boolean, default: true },
+    hasHomeSearch: { type: Boolean, default: true },
+  },
   data() {
     return {
       slide: 0,
