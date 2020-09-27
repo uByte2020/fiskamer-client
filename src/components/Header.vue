@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar id="home-nav" toggleable="lg" type="dark">
-      <b-navbar-brand id="navbar-brand" href="#">
+      <b-navbar-brand id="navbar-brand" href="#" class="ml-4">
         <img
           class="fiskamer-logo"
           src="@/assets/imgs/logo2.png"
@@ -13,7 +13,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-5">
-          <b-nav-item class="da-nav-item">INICIO</b-nav-item>
+          <b-nav-item class="da-nav-item">HOME</b-nav-item>
           <b-nav-item class="da-nav-item">SERVIÇOS</b-nav-item>
           <b-nav-item class="da-nav-item">FORNECEDORES</b-nav-item>
         </b-navbar-nav>
@@ -58,6 +58,7 @@ export default {
 .da-nav-item a {
   color: #fff !important;
   transition: 0.1s linear 0.1s;
+  font-size: 0.8rem;
 }
 
 /* .da-rght-nav-item a {

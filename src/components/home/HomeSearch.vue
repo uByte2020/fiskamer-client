@@ -3,12 +3,12 @@
     <div>
       <b-form inline class="home-search-form">
         <b-input
-          id="inline-form-input-name"
+          id="inline-form-input-what"
           class="mb-2 mr-sm-2 mb-sm-0"
           placeholder="O que está a procura?"
         ></b-input>
         <b-input
-          id="inline-form-input-name"
+          id="inline-form-input-where"
           class="mb-2 mr-sm-2 mb-sm-0"
           placeholder="Onde?"
         ></b-input>
@@ -58,9 +58,27 @@ export default {
   width: 65%;
 }
 #home-search > div {
-  margin-top: 5%;
+  margin-top: 4%;
 }
 .home-search-form {
   justify-content: center;
+}
+
+#inline-form-input-what:focus,
+#inline-form-input-where:focus {
+  border-color: rgba(255, 205, 3, 0.8);
+  box-shadow: 0 1px 1px rgba(255, 205, 3, 0.8) inset,
+    0 0 8px rgba(255, 205, 3, 0.8);
+  outline: 0 none;
+}
+
+@media (max-width: 767px) {
+  #home-search > div {
+    margin-top: 1% !important;
+  }
+  #inline-form-input-what,
+  #inline-form-input-where {
+    width: 60% !important;
+  }
 }
 </style>

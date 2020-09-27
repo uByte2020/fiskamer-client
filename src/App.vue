@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -28,5 +28,19 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(44, 62, 80, 0.7);
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #212529;
+  border-radius: 10px;
+  /* outline: 1px solid #2c3e50; */
 }
 </style>

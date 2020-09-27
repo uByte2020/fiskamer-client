@@ -24,7 +24,7 @@
           <p class="da-carousel-caption-content">{{ item.content }}</p>
         </div>
       </b-carousel-slide>
-      <HomeSearch />
+      <HomeSearch class="da-home-search" />
     </b-carousel>
   </div>
 </template>
@@ -63,7 +63,7 @@ export default {
   created() {},
   mounted() {
     document.getElementsByClassName('carousel-caption').forEach((element) => {
-      element.setAttribute('style', 'bottom: 30%; left: 12%;')
+      element.setAttribute('style', 'bottom: 27%; left: 12%;')
     })
   },
 }
@@ -84,5 +84,62 @@ export default {
 
 .da-carousel-caption .da-carousel-caption-content {
   font-size: 1.2rem;
+}
+
+@media (min-width: 1281px) {
+  .card-carousel--card {
+    min-width: 32%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .card-carousel--card {
+    min-width: 32%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-carousel--card {
+    min-width: 32%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .card-carousel--card {
+    min-width: 32%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .da-carousel-caption {
+    width: 80%;
+  }
+  .da-carousel-caption-header {
+    font-size: 1.2rem;
+  }
+  .da-carousel-caption-content {
+    font-size: 1rem !important;
+  }
+  #home-search > div {
+    margin-top: 1% !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+  .da-home-search {
+    display: none;
+  }
+  .da-carousel-caption {
+    width: 80%;
+  }
+  .da-carousel-caption-header {
+    font-size: 1rem;
+  }
+  .da-carousel-caption-content {
+    font-size: 0.8rem !important;
+  }
 }
 </style>
