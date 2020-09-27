@@ -12,24 +12,26 @@
             <HomeSearch backgroundColor="rgba(255, 205, 3, 0.8)" 
                 BtnColor="#212529"/>
         </div>
+        <carousell/>
     </div>
 </template>
 
 <script>
 import {Header, HomeSearch} from '@/components'
+import carousell from '../components/Search/carousell.vue'
 export default {
     name: 'Search',
     components:{
         Header,
-        HomeSearch
+        HomeSearch,
+        carousell,
     },
     data(){
         return{
             backgroundimg: require('@/assets/imgs/dj-1.jpg')
         }
     },
-    props:{
-    }
+    props:{}
 }
 </script>
 
