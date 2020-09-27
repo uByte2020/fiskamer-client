@@ -4,6 +4,8 @@ import AboutUs from './home/AboutUs.vue'
 import HomeSearch from './home/HomeSearch.vue'
 import TopService from './home/TopService.vue'
 import DetalheServicoHeader from './detalheServico/DetalheServicoHeader.vue'
+import PedirOrcamento from './detalheServico/PedirOrcamento.vue'
+import Comentarios from './detalheServico/Comentarios.vue'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
 
@@ -14,6 +16,8 @@ export {
   HomeSearch,
   TopService,
   DetalheServicoHeader,
+  PedirOrcamento,
+  Comentarios,
   Header,
   Footer,
 }

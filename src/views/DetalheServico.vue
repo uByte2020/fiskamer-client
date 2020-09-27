@@ -29,8 +29,11 @@
           </div>
         </div>
       </div>
-      <div class="col col-md-4 mr-0 pr-0"></div>
+      <div class="col col-md-4 mr-0 pr-5">
+        <PedirOrcamento />
+      </div>
     </div>
+    <Comentarios />
     <Footer />
   </div>
 </template>
@@ -40,11 +43,20 @@ import {
   Header,
   DetalheServicoHeader,
   HomeCarrousel,
+  PedirOrcamento,
+  Comentarios,
   Footer,
 } from '@/components'
 export default {
   name: 'DetalheServico',
-  components: { Header, DetalheServicoHeader, HomeCarrousel, Footer },
+  components: {
+    Header,
+    DetalheServicoHeader,
+    PedirOrcamento,
+    HomeCarrousel,
+    Comentarios,
+    Footer,
+  },
   props: {},
   data() {
     return {}
