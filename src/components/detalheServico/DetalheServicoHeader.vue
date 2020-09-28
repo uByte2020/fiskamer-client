@@ -53,6 +53,7 @@ export default {
 <style scoped>
 .da-header--info {
   text-align: left;
+  font-size: 0.9rem;
 }
 .da-header--desc p:first-of-type span {
   font-weight: 600;
@@ -61,6 +62,7 @@ export default {
 
 .da-header--action {
   text-align: right;
+  font-size: 0.9rem;
 }
 
 .da-header--action button:first-of-type {
@@ -69,9 +71,13 @@ export default {
 
 .da-header--options-item {
   text-align: left;
-  /* border-left: 2px solid rgba(0, 0, 0, 0.4); */
+  font-size: 0.9rem;
   margin-right: 5px;
   padding: 0 10px;
+}
+
+.da-header--options-item button {
+  font-size: 0.9rem;
 }
 
 .da-header--vertical-item {

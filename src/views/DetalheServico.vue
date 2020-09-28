@@ -34,6 +34,7 @@
       </div>
     </div>
     <Comentarios />
+
     <Footer />
   </div>
 </template>

@@ -64,6 +64,7 @@ export default {
 .da-orcamento-input,
 .btn-enviar-pedido {
   margin: 1.5% 0;
+  font-size: 0.9rem;
 }
 
 .btn-enviar-pedido {
@@ -72,5 +73,6 @@ export default {
 
 #da-orcamento-textarea {
   overflow-y: auto !important;
+  font-size: 0.9rem;
 }
 </style>

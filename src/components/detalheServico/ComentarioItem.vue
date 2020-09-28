@@ -1,7 +1,7 @@
 <template>
   <div class="da-comentario">
     <div class="d-flex flex-row align-items-center da-photo-name">
-      <div style="max-width: 5%" class="mr-1">
+      <div style="max-width: 5%" class="mr-1 da-photo">
         <b-img
           v-bind="mainProps"
           src="https://picsum.photos/250/250/?image=58"
@@ -10,12 +10,11 @@
           alt="Responsive image"
         ></b-img>
       </div>
-      <div>
-        <span class="mr-4">Daniel Almeida</span>
-        <span>Data e Hora</span>
-      </div>
+      <span class="mr-4 da-name">Daniel Almeida</span>
+      <span class="mr-4 da-data-hora">Data e Hora</span>
+      <!-- <button class="btn">Responder</button> -->
     </div>
-    <div class="da-description pl-5 text-justify">
+    <div class="da-comments pl-5 text-justify">
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -48,4 +47,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.da-name {
+  font-weight: 600;
+  color: rgba(44, 62, 80, 1);
+  font-size: 0.9rem;
+}
+.da-data-hora {
+  font-size: 0.8rem;
+  color: rgba(44, 62, 80, 0.5);
+  font-weight: 600;
+}
+.da-comments {
+  font-size: 0.9rem;
+  width: 80%;
+}
+</style>

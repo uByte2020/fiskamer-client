@@ -108,6 +108,7 @@ export default {
 
 <style scoped>
 footer {
+  font-size: 0.9rem;
   background-color: #474645;
   position: static;
   padding-top: 20px;
