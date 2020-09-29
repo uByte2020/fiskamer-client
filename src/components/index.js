@@ -6,6 +6,9 @@ import HomeSearch from './home/HomeSearch.vue'
 import TopService from './home/TopService.vue'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
+import Carousel from './Search/Carousel.vue'
+import Spaces from './Search/Spaces.vue'
+import Pesquisas from './Search/Pesquisas.vue'
 
 export {
   HelloWorld,
@@ -16,4 +19,7 @@ export {
   HomeSearch,
   TopService,
   Footer,
+  Carousel,
+  Spaces,
+  Pesquisas
 }
