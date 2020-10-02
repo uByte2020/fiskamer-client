@@ -24,8 +24,8 @@
               class="card-carousel--card"
             >
               <img v-bind:src="item.foto" class="img-fluid" />
-              <div>
-                {{ item.Nome }}
+              <div id="texto">
+                <h2>{{ item.Nome }}</h2>
               </div>
             </div>
           </div>
@@ -138,6 +138,13 @@ body {
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 600;
+}
+#texto {
+  margin: -120px auto auto 125px;
+  font-size: 20px;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  color: rgb(230, 168, 0);
+  position: absolute;
 }
 .card-carousel-wrapper {
   display: flex;

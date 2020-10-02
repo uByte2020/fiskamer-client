@@ -58,7 +58,6 @@ export default {
   margin-bottom: 10px;
   float: left;
   width: 100%;
-  border-right: 1px rgb(155, 151, 151) solid;
 }
 #itens {
   width: 75%;
@@ -73,11 +72,11 @@ export default {
   color: #0000 !important;
   text-decoration: none;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   #Pesquisas {
-    float: left;
     width: 100%;
     margin: auto auto 10px auto;
+    border: none;
   }
 
   #Search_txt {

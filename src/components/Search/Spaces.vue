@@ -16,8 +16,8 @@
             <button type="button" class="btn btn-link icones">
               <b-icon icon="suit-heart"></b-icon>
             </button>
-            <button type="buttom" class="btn btn-danger">Orçamento</button>
-            <button type="buttom" class="btn btn-danger">Solicitar</button>
+            <button type="buttom" class="btn bot">Orçamento</button>
+            <button type="buttom" class="btn bot">Solicitar</button>
           </div>
         </div>
       </div>
@@ -41,8 +41,10 @@ export default {}
   margin-right: 5px;
   color: black;
 }
-.btn {
+.bot {
   margin: 5px;
+  background-color: rgb(230, 168, 0);
+  color: #ffff;
 }
 p {
   text-align: left;
