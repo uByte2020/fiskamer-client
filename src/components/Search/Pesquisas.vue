@@ -21,22 +21,54 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-8 col-lg-8">
-        <Spaces />
+        <Service v-for="service in services" :key="service._id" :service="service"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Spaces from './Spaces'
+import Service from './Service'
 export default {
   components: {
-    Spaces,
+    Service,
   },
   data() {
     return {
       Buscar: '',
       Localizacao: [{ espaco: 'Luanda' }, { espaco: 'Bié' }],
+      services:[
+        {
+          _id:1,
+          nome: 'Why do we use it',
+          descricao:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`,
+          coverImage:require('@/assets/imgs/salao.jpg'),
+          categoria:{
+            categoria:'Salão'
+          },
+          classification:4,
+          location:'Av 21 de Janeiro, Morro Bento',
+          price:0.0,
+          fornecedor:{
+            telemovel:940363168
+          }
+        },
+        {
+          _id:2,
+          nome: 'What is Lorem Ipsum',
+          descricao:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`,
+          coverImage:require('@/assets/imgs/salao.jpg'),
+          categoria:{
+            categoria:'Buffet'
+          },
+          classification:4,
+          location:'Av 21 de Janeiro, Morro Bento',
+          price:0.0,
+          fornecedor:{
+            telemovel:940363168
+          }
+        }
+      ]
     }
   },
   props: {

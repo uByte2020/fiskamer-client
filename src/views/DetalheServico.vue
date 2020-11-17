@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <DetalheServicoHeader />
+    <DetalheServicoHeader :service="service"/>
     <div class="row pl-5 mx-0">
       <div class="col col-md-8 col-lg-8 ml-0 pl-0">
         <div class="row ml-0 pl-0">
@@ -14,16 +14,7 @@
             <div class="text-left">
               <h5>Descrição:</h5>
               <p class="text-justify">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum
+                {{service.descricao}}
               </p>
             </div>
           </div>
@@ -58,7 +49,14 @@ export default {
     Comentarios,
     Footer,
   },
-  props: {},
+  props:{
+    service: {
+      type:Object,
+      default: function(){
+        return {}
+      }
+    }
+  },
   data() {
     return {}
   },

@@ -1,26 +1,11 @@
 <template>
   <div class="da-home-category mt-5">
     <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="category-item col col-lg-2">
-          <p class="category-item--icon"></p>
-          <p class="category-item--description">What is Lorem Ipsum</p>
-        </div>
-        <div class="category-item col col-lg-2">
-          <p class="category-item--icon"></p>
-          <p class="category-item--description">Lorem Ipsum</p>
-        </div>
-        <div class="category-item col col-lg-2">
-          <p class="category-item--icon"></p>
-          <p class="category-item--description">Lorem Ipsum</p>
-        </div>
-        <div class="category-item col col-lg-2">
-          <p class="category-item--icon"></p>
-          <p class="category-item--description">Lorem Ipsum</p>
-        </div>
-        <div class="category-item col col-lg-2">
-          <p class="categary-item--icon"></p>
-          <p class="categary-item--description">Lorem Ipsum</p>
+      <div class="row justify-content-md-center my-2">
+        <div v-for="category in categories" :key="category._id" class="category-item mx-2 col col-lg-1">
+          <span v-show="!category.hasImage" class="h1 category-item--icon">
+            <b-icon icon="person-plus-fill" class="rounded"></b-icon></span>
+          <p class="category-item--description">{{category.category}}</p>
         </div>
       </div>
       <div class="row justify-content-md-center">
@@ -38,6 +23,61 @@ export default {
   props: {
     msg: String,
   },
+  data:()=>{
+    return{
+      categories:[
+        {
+          _id:1,
+          category: 'DJ',
+          icon:'',
+          image:'',
+          hasImage:false
+        },
+        {
+          _id:2,
+          category: 'Bebidas',
+          icon:'',
+          image:'',
+          hasImage:false
+        },
+        {
+          _id:3,
+          category: 'Salão',
+          icon:'',
+          image:'',
+          hasImage:false
+        },
+        {
+          _id:4,
+          category: 'Decoração',
+          icon:'',
+          image:'',
+          hasImage:false
+        },
+        {
+          _id:5,
+          category: 'Buffê',
+          icon:'',
+          image:'',
+          hasImage:false
+        },
+        {
+          _id:6,
+          category: 'Fotografo',
+          icon:'',
+          image:'',
+          hasImage:false
+        },
+        {
+          _id:7,
+          category: 'Noiva',
+          icon:'',
+          image:'',
+          hasImage:false
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -45,5 +85,9 @@ export default {
 .da-home-category button {
   background-color: #ffcd03;
   color: #2c3e50;
+}
+.category-item{
+cursor: pointer;
+text-align: center;
 }
 </style>

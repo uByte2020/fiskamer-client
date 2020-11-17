@@ -2,11 +2,11 @@
   <div class="da-header py-4">
     <div class="row px-5 align-items-center mr-0">
       <div class="col col-md-8 da-header--info">
-        <h1 class="da-header--title">Quinta do Paraiso</h1>
+        <h1 class="da-header--title">{{service.nome}}</h1>
         <div class="da-header--desc">
           <p>
-            Neque porro quisquam est qui dolorem ipsum |
-            <span>999999000</span>
+            {{service.location}} |
+            <span>{{service.fornecedor.telemovel}}</span>
           </p>
         </div>
       </div>
@@ -26,12 +26,12 @@
       <span class="da-header--vertical-item"> </span>
       <div class="da-header--options-item">
         <p>Rating</p>
-        <p>4.5 de 5.0</p>
+        <p>{{service.classification}} de 5.0</p>
       </div>
       <span class="da-header--vertical-item"> </span>
       <div class="da-header--options-item">
         <p>Preços a partir de:</p>
-        <p>15.000 AKZ</p>
+        <p>{{service.price}} AKZ</p>
       </div>
     </div>
   </div>
@@ -41,7 +41,14 @@
 export default {
   name: 'DetalheServicoHeader',
   components: {},
-  props: {},
+  props:{
+    service: {
+      type:Object,
+      default: function(){
+        return {}
+      }
+    }
+  },
   data() {
     return {}
   },

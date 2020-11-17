@@ -9,7 +9,7 @@ import Comentarios from './detalheServico/Comentarios.vue'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
 import Carousel from './Search/Carousel.vue'
-import Spaces from './Search/Spaces.vue'
+import Service from './Search/Service.vue'
 import Pesquisas from './Search/Pesquisas.vue'
 
 export {
@@ -24,6 +24,6 @@ export {
   Header,
   Footer,
   Carousel,
-  Spaces,
+  Service,
   Pesquisas
 }

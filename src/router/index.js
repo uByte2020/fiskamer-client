@@ -7,32 +7,33 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home,
   },
   {
     path: '/detalhe-servico',
     name: 'detalhe-servico',
     component: DetalheServico,
+    props: true 
   },
   {
-    path: '/Cadastrar',
-    name: 'Cadastrar',
+    path: '/cadastrar',
+    name: 'cadastrar',
     component: Cadastra,
   },
   {
-    path: '/Login',
-    name: 'Login',
+    path: '/login',
+    name: 'login',
     component: Login,
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'about',
     component: About,
   },
   {
-    path: '/Search',
-    name: 'Search',
+    path: '/search',
+    name: 'search',
     component: Search,
   },
 ]

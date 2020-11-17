@@ -77,6 +77,10 @@ export default {
 .da-carousel-caption {
   width: 60%;
 }
+
+.da-carousel-slide{
+  height: 100vh!important;
+}
 .da-carousel-caption .da-carousel-caption-header,
 .da-carousel-caption .da-carousel-caption-content {
   text-align: left;

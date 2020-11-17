@@ -4,6 +4,7 @@
     <div
       id="Conteudo"
       :style="{ backgroundImage: 'url(' + backgroundimg + ')' }"
+      class="mb-5"
     >
       <b-img
         id="img"
@@ -14,21 +15,21 @@
       </b-img>
       <HomeSearch backgroundColor="rgba(255, 205, 3, 0.8)" BtnColor="#212529" />
     </div>
-    <Carousel />
+    <!-- <Carousel /> -->
     <Pesquisas />
     <Footer />
   </div>
 </template>
 
 <script>
-import { Header, HomeSearch, Carousel, Pesquisas, Footer } from '@/components'
+import { Header, HomeSearch, Pesquisas, Footer } from '@/components'
 
 export default {
   name: 'Search',
   components: {
     Header,
     HomeSearch,
-    Carousel,
+    // Carousel,
     Footer,
     Pesquisas,
   },
@@ -53,6 +54,6 @@ export default {
   padding: 10px;
   width: 70%;
   height: 65%;
-  margin: 180px auto;
+  margin: 50px auto;
 }
 </style>
